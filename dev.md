@@ -1,5 +1,5 @@
 # useful commands
-## clean up docker 
+## clean up docker
 use it when docker says "There is no space left on device". It will remove built but not used images and other temporary files.
 ```
 docker system prune -f
@@ -69,14 +69,14 @@ zn "%SYS" \
   set webProperties("iKnowEnabled") = 1 \
   set webProperties("DeepSeeEnabled") = 1 \
   set sc = ##class(Security.Applications).Create(webName, .webProperties) \
-  write "Web application "_webName_" has been created!",! 
+  write "Web application "_webName_" has been created!",!
 ```
 
 
 
 ```
-do $SYSTEM.OBJ.ImportDir("/opt/irisbuild/src",, "ck") 
-```   
+do $SYSTEM.OBJ.ImportDir("/opt/irisbuild/src",, "ck")
+```
 
 
 ### run tests described in the module
@@ -91,3 +91,6 @@ IRISAPP:zpm>test package-name
 
 
 do ##class(%SYS.Python).Shell()
+
+
+irissqlcli iris://_SYSTEM:SYS@localhost:1980/USER
